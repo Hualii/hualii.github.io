@@ -1,0 +1,82 @@
+baseURL = "https://hualii.github.io/"
+defaultContentLanguage = "zh"
+title = "Hualii's Blog"
+theme = "PaperMod"
+paginate = 10
+
+[languages.zh]
+  locale = "zh-CN"
+  direction = "ltr"
+  label = "中文"
+
+[params]
+  description = "WPF Source Code Deep Dive | .NET Open Source Contribution"
+  author = "Hualii"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+
+[params.homeInfoParams]
+  Title = "Hi 👋, I'm Hualii"
+  Content = """
+  🖥️ WPF Source Code Deep Dive  
+  🔧 .NET Open Source Contributor  
+  🎯 Goal: Microsoft MVP  
+  ---
+  深入 WPF 源码，拆解 .NET 框架内部机制。  
+  每月更新博客 + 视频，记录从源码阅读到开源贡献的全过程。
+  """
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Hualii"
+
+[[params.socialIcons]]
+  name = "youtube"
+  url = "https://youtube.com/@HualiiDev"
+
+[params.assets]
+  favicon = "/favicon.ico"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = true
+    codeFences = true
+    guessSyntax = true
+
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[[menu.main]]
+  identifier = "archives"
+  name = "归档"
+  url = "/archives/"
+  weight = 5
+
+[[menu.main]]
+  identifier = "categories"
+  name = "分类"
+  url = "/categories/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 15
+
+[[menu.main]]
+  identifier = "search"
+  name = "搜索"
+  url = "/search/"
+  weight = 20
