@@ -7,7 +7,7 @@ paginate = 10
 [languages.zh]
   locale = "zh-CN"
   direction = "ltr"
-  label = "中文"
+  languageName = "中文"
 
 [params]
   description = "WPF Source Code Deep Dive | .NET Open Source Contribution"
@@ -37,14 +37,23 @@ paginate = 10
   url = "https://github.com/Hualii"
 
 [[params.socialIcons]]
-  name = "youtube"
-  url = "https://youtube.com/@HualiiDev"
+  name = "bilibili"
+  url = "https://space.bilibili.com/448119"
 
 [params.assets]
   favicon = "/favicon.ico"
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  findMatches = true
+  includeScore = true
+  minMatchCharLength = 2
+  keys = ["title", "permalink", "summary", "content"]
 
 [markup]
   [markup.highlight]
